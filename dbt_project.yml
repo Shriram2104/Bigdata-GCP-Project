@@ -1,0 +1,19 @@
+name: 'ga4_attribution'
+version: '1.0'
+config-version: 2
+
+profile: 'ga4_attribution'
+
+model-paths: ["models"]
+analysis-paths: ["analysis"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"
+clean-targets: ["target", "dbt_modules"]
+
+models:
+  ga4_attribution:
+    +materialized: view
